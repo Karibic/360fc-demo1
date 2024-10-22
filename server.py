@@ -1,7 +1,8 @@
 import os
 from flask import Flask, render_template
 
-app = Flask(__name__)
+#app = Flask(__name__)
+app = Flask(__name__, template_folder='/mnt/data')
 
 def print_files_in_directory(directory):
     for entry in os.scandir(directory):
@@ -13,8 +14,7 @@ def print_files_in_directory(directory):
 @app.route('/')
 def hello_world():
     print("helloworld!")
-    print_files_in_directory('/mnt/')
-    return render_template('/mnt/data/index.html')
+    #return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()
