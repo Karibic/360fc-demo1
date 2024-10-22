@@ -12,6 +12,7 @@ def print_files_in_directory(directory):
 
 @app.route('/')
 def hello_world():
+    print("helloworld!")
     print_files_in_directory('/mnt/')
     return render_template('/mnt/data/index.html')
 
