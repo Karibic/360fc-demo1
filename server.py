@@ -14,7 +14,7 @@ def print_files_in_directory(directory):
 @app.route('/')
 def hello_world():
     print("helloworld!")
-    #return render_template('index.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()
