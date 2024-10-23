@@ -17,5 +17,10 @@ def hello_world():
     print("helloworld!")
     return render_template('index.html')
 
+@app.route('/<template_name>')
+def dynamic_template(template_name):
+    return render_template(f'{template_name}.html')
+
+
 if __name__ == '__main__':
     app.run()
