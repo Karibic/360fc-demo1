@@ -3,6 +3,7 @@ from flask import Flask, render_template
 
 #app = Flask(__name__)
 app = Flask(__name__, template_folder='/mnt/data')
+#app = Flask(__name__, template_folder='/Users/wenqiyuan/Code/360fc-demo1/data')
 
 def print_files_in_directory(directory):
     for entry in os.scandir(directory):
